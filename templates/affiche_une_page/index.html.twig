@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+    <h1>Bienvenue sur la page d'accueil de ProStages</h1>
+    <h1> Liste de tous les stages </h1>
+    {% for stage in listeStages %}
+        <h3> <a href=" {{path ('detailStage', { 'id' : stage.id } ) }}" > {{ stage.titre }}</a> chez {{ stage.entreprise.nom }}</h3>
+    {% endfor %}
+{% endblock %}

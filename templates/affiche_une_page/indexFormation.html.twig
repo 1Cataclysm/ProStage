@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block contenu %}
+    <h1> Liste des formations de l'IUT </h1>
+    {% for formation in listeFormations %}
+        <h2><a href=" {{ path ('formationStage', {'id' : formation.id}) }} "> {{ formation.nomLong }} ( {{ formation.nomCourt }} ) </a></h2>
+    {% endfor %}
+{% endblock %}
+ 

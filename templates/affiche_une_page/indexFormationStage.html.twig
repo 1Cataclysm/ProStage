@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block contenu %}
+    <h1>Liste des stages pour la formation {{ formation.nomLong }} ( {{ formation.nomCourt }} )</h1>
+    {% for stage in formation.stages %}
+        Titre : {{stage.titre}} <br>
+        Description : {{stage.descMissions}} <br>
+        Mail : {{stage.emailContact}} <br><br>
+    {% endfor %}
+
+{% endblock %}
+

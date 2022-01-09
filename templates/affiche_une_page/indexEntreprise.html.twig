@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+
+{% block contenu %}
+    <h2> {{ "Liste des entreprises proposant un stage" }}! </h2>
+    {% for entreprise in entreprises %}
+        <h3><a href=" {{ path ('entrepriseStage', {'id' : entreprise.id}) }} "> {{ entreprise.nom }} </a></h3>
+    {% endfor %}
+{% endblock %}
+

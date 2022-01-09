@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu%}
+    <h1> Description du stage pour l'entreprise {{ stage.entreprise.nom }} </h1>
+    Titre : {{ stage.titre }} <br>
+    Description : {{ stage.descMissions }} <br>
+    Email : {{ stage.emailContact }} <br>
+    Site web de {{stage.entreprise.nom}} : {{ stage.entreprise.URLsite }} <br>
+{% endblock %}
